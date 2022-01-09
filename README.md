@@ -7,7 +7,7 @@
 In Cybersecurity you need to reference to many sources. The main sources are:
 - Frameworks -> a set of agreed upon policies, procedures and processes that define how information is managed (ex NIST)
 - Best Practices -> procedures and processes that are widely accepted within an industry as being effective
-- Vendor documentation -> a mix of requirements and suggestions for the specific security configuration of their product (ex Microsoft Server Security Guide)
+- Vendor documentation -> a mix of requirements and suggestions for the specific security configuration of the product (ex Microsoft Server Security Guide)
 - Regulatory Requirements -> laws that you must comply with
 
 Defense in Depth is a concept that come from military terminology. It means to put many obstocles in front of the enemy and this way of thinking permits to minimize risks. 
@@ -19,6 +19,20 @@ The reference's framework in Cybersecurity is [NIST](https://csrc.nist.gov/publi
 - [NIST 800-123](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-123.pdf) -> it contains valuable info about server vulnerabilities and threats
 - [NIST 800-175Br1](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-175Br1.pdf) -> It is useful if your organization wants to implement encryption
 - NIST CSF -> it provides info on authentication and identity management strategies, risk assessments, managing security in the supply chain and vulnerability disclosure.  
+
+### 2. Principle of least privilage
+
+Principle of least privilage stand for granting the lowest level of access that is required to accomplish task and removing unneccessary access when possible. It applies to people in accesing data, devices, network traffic both external and internal, database and applications.
+
+## System security: securing networks
+
+
+
+## Monitoring and logging for detection of malicious activity
+
+
+
+
 
 
 

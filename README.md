@@ -26,6 +26,37 @@ Principle of least privilage stand for granting the lowest level of access that 
 
 ## System security: securing networks
 
+### 1. Firewall
+
+**Firewall** is the first line of defense. It is a network device that monitors incoming and outcoming traffic. A firewall doesn't know if a traffic is good or bad, it only does what you tell it to do. The main kind of firewalls are:
+- Network firewall -> it is a device that separates your local network to the outsides. It has components (CPU, RAM, long-term storage)
+- Host based firewall -> it is a host based firewall typically runs within an OS on a computer (wx Windows Firewall or MAC OS Firewall). It protects only the computer and the    services is running on. 
+- Application firewall  -> it protects applications
+
+Today we also have Next Gen Firewall that permits capabilities beyond a traditional, statful firewall. In fact it permits not only to monitor the incoming and outcoming traffic but also to add some features like application awareness and control, integrated intrusion prevention and cloud-delivered threat intelligence. 
+
+A baisc Cisco firewall rule consists:
+- The interface the traffic is travesing
+- The action being taken (e.g. permit or deny)
+- The protocol being used
+- The objects involved e.g. host or object groups
+- The service or port involved (https, port 20)
+
+Example: if we had a vendor with an IP of 22.11.33.44 that wanted to access our database server with an IP of 10.10.10.19 on port 9081 on firewall interface Acme-Ingress here is what the rule might look like:
+
+**access-list Acme-Ingress extended permit tcp host 22.11.33.44 host 10.10.10.19 eq 9081**
+
+Components:
+**Acme-Ingress** -> the name of the internal interface
+**extended permit** -> flexibility in matching traffic and the ability to match based on protocol, source and destination address. 
+**TCP** -> protocol used
+**22.11.33.44** -> vendor host
+**10.10.10.19** -> destination of the db server
+**eq 9081** -> the port used
+
+### 2. Wireless
+
+
 
 
 ## Monitoring and logging for detection of malicious activity

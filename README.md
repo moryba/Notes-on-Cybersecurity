@@ -67,7 +67,7 @@ Some security measures to protect your wireless:
 - use WIDS/WIPS: **wireless intrusion detection/prevention system**
 - guest access routes with zerp visibility of business network
 
-## 3. [IDS\IPS](https://www.dnsstuff.com/ids-vs-ips)
+### 3. [IDS\IPS](https://www.dnsstuff.com/ids-vs-ips)
 
 **IDS** means intrusion detection system, it can be a hardware or a vm. It is a passive tool that monitors and reports. So it is up to the security analyst to take action. An **IPS** is an active tool and it takes actions.  
 

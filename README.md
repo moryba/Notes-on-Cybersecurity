@@ -55,6 +55,34 @@ Components:
 **eq 9081** -> the port used
 
 ### 2. Wireless
+Choosing the right vendor is key when developing your wireless solution. It si important to tak in consideration some keys like the locarions and the number of employes and how this aspects could change in the future. It is also important if it is based on cloud or on prem solution.  
+
+Another important step is the authentication method and encryption method to choose. Below some methods:
+- EAP(extensible authentication protocol with radius) -> allows open authentiction to the client, usually with radius server
+- PEAP(protected extensible authentication protocol) -> similar to EAP but adds RLS tunnerl
+- WPA2 Enterprise -> 802.1x encryption
+
+Some security measures to protect your wireless:
+- use lower power on access points
+- use WIDS/WIPS: **wireless intrusion detection/prevention system**
+- guest access routes with zerp visibility of business network
+
+## 3. [IDS\IPS](https://www.dnsstuff.com/ids-vs-ips)
+
+**IDS** means intrusion detection system, it can be a hardware or a vm. It is a passive tool that monitors and reports. So it is up to the security analyst to take action. An **IPS** is an active tool and it takes actions.  
+
+**IDS Rule**
+alert tcp any any->131.131.129.1 111(msg:"RPC Attempt";sid:1000001;)
+
+- alert -> it tells us that when the rule fires, it will send an alert to the administrator
+- any -> the source **any** indicates any source port will fire the alert
+- 131.131.129.1 -> it is a destination IP Address (our address)
+- 111 -> destination port
+- msg:"RPC Attempt";sid:1000001; -> it is the rule options and it includes the message and the sid number that the admin will receive
+
+
+
+
 
 
 

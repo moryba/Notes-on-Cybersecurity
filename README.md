@@ -72,22 +72,56 @@ Some security measures to protect your wireless:
 **IDS** means intrusion detection system, it can be a hardware or a vm. It is a passive tool that monitors and reports. So it is up to the security analyst to take action. An **IPS** is an active tool and it takes actions.  
 
 **IDS Rule**
-alert tcp any any->131.131.129.1 111(msg:"RPC Attempt";sid:1000001;)
 
-- alert -> it tells us that when the rule fires, it will send an alert to the administrator
+alert tcp any any -> 131.131.129.1 111 (msg:"RPC Attempt";sid:1000001;)
+
+- alert -> notify us when the rule fires, it will send an alert to the administrator
 - any -> the source **any** indicates any source port will fire the alert
 - 131.131.129.1 -> it is a destination IP Address (our address)
 - 111 -> destination port
 - msg:"RPC Attempt";sid:1000001; -> it is the rule options and it includes the message and the sid number that the admin will receive
 
+### 4. Securing Windows at the OS Level
 
+**Windows services** are small programs that run in  the background of the Operating System. Windows services are generally single-task that perform only one action. Disabling services that are no longer needed reduces the attack surface of the machine. 
+There are three primary types of windows services accounts:
 
+- Local service account -> the worker process doesn't require access outside of the server in which it is runnning
+- Network Service account -> it has fewer access privileges on the system than the local system user account
+- Local system account -> it is a predefined local account used by service control manager
 
+To access windows services, you can easily type **windows key + R then type "Services.msc"**
 
+To **set or control windows file permissions** we have to follow these steps:
+- Right click on the properrties and select the security tab
+- Select edit 
+- Remove or addpermissions
 
+To know the version of your windows, you can simply digit winver in the command line. When performing a security analysis, trubleshooting performance issues or performing incident response os when istalling an application it is important to know the version installed in the machine. Go to powershell and digit **Get-HotFix** to know the last update installed. 
+There are many kind of updates on Microsoft:
+- Critical update -> it is a widely released fix for a specific problem that addresses a critical non security-related bug
+- Definition update -> it is a widely released and frequent software update that contains additions to product's definition database
+**Definitio database are used to detect objects that have specific attributes, such as malicious code, phising websites or junk mail.** 
+- Driver -> a driver is the software that interacts between your operating system and the device or hardware
+- Feature pack -> it is distributed outside the context of a product release 
+- Security update -> it is a widely released fix for a specific product, security-related vulnerability
+- Security pack -> it is tested cumulative set of all hotfixes, security updates, critical updates and updates 
+- Tool -> it is a utility of feature that helps complete a task or set of tasks
+- Update -> it addresses a non-critical, non security-related bug
 
+Beginning in 2016, Microsoft views the Windows Operating System as a service that means updates must be installed automatically to have the optimal experience. IT department usually run some centralized windows patch management. 
+- WSUS (Windows Server Updates Services) -> it is a free utility to help centralize update management, automate the installation of updates at a time that most benefits the organization and manage the bandwidth consumption of updates
+- SCCM (System Center Configuration Manager) -> it is a product developed by Microsoft that can be used for windows updates, installation of new applications, OS upgrades and ativirus scan. In other words, it permits to manage a large number of computers running on windows.
 
 ## Monitoring and logging for detection of malicious activity
+
+### 1. System event logs
+Logs are records of events that take place on the computer. 
+
+### 2. Monitoring Network Traffic
+### 3. SIEM
+
+
 
 
 

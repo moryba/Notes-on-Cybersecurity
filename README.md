@@ -203,6 +203,16 @@ Useful link for cheking virus:
  ## Cryptography Basics
  
  ### 1.Introduction to Encryption
+ In cryptography, encryption is the process of taking data that is plaintext (readable data) and converting it via a mathematical algorithm into ciphertext. Only the authorized parties with the appropriate key can reverse the process and view the data. 
+ 
+The first type of encryption is the **Symmetric encryption**: it uses only one key, a secret ket to both encrypt and decrypt the data. The key can be in the form of a passcode or a series of randomized letters and numbers from a generator or RNG. There are two types of symetric encryption algorithms:
+- **Block algorithms** -> in which set length bits are encrypted with the use of a specific secret key. As the data is being encrypted the system holds the data in memory as it waits for the block to complete
+- **Stream algorithms** -> the data is encrypted as ait strems and is not retained in system memory. 
+
+The types of symmetric encryption are:
+- **AES**: advanced encryption standard was designed around the start of this century to replace DES. 
+- **Twofish**
+- **RC4**
  
  
  

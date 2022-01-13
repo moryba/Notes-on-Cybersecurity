@@ -1,4 +1,4 @@
-# Notes on Cybersecurity
+# Notes on Cybersecurity - Defending and Securing Systems
 
 ## Best Practices in defending Computer systems
 
@@ -131,7 +131,7 @@ From the categoies saw before we could have 5 kinds of events:
 - Success Audit -> a succes audit is when an audited event was successful. Such as you typed your psw in correctly to login
 - Failure Audit -> a failure audit is when an audited event was unsuccesful. When you attempt to access a folder without permissions for example.
 
-Steps to checl for failed login attempts:
+Steps to check for failed login attempts:
 - Open powershell
 - Run **GET-EVENTLOG -Logname Security -InstanceId 4625 -Newest 25** where we are requiring to get info from the Security where the instance ID of the failed login is 4625
 - For a deeper analysis Run event viewer 
@@ -180,10 +180,44 @@ It is important to perform the following steps when triaging an alert report:
 - netstat -atep | grep ssh : to view all the current ssh connections
 
 Useful link for cheking virus:
-https://www.virustotal.com/gui/home/upload
-https://www.abuseipdb.com/
+- https://whois.net/
+- https://www.virustotal.com/gui/home/upload
+- https://www.abuseipdb.com/
 
-### 3. SIEM
+### 3. [SIEM](https://www.gartner.com/reviews/market/security-information-event-management)
+
+**SIEM** stands for **Security Information and Event Management**, it is an application that serves as a log aggregator and more importantly, analyzes the logs to allow alerting, dashboard creation and efficient queries to run. 
+
+**SIEMs** allow you to retain your log data for much longer. In particular, networking equipment don't typically have much storage and logs are overwritten frequently. Some considerations when you choose your SIEM solution:
+- **Licensing** -> knowing what is the licensing model and if it is based on users, nodes or volume of events
+- **Scalability** -> knowing if your organization experience rapid growth, he solution will be able to keep it up
+- **Dashboards** -> difficulty in costumize existing and make new dashboards
+- **Alerts** -> knowing if the solution is capable of real-time alerting
+- **Query language** -> knowing how much complicated is the query language and if there are documnetation available
+ 
+ Types of SIEMs:
+ 
+ - [**Open Source SIEM**](https://www.dnsstuff.com/free-siem-tools)
+ - [**Commericial SIEM**](https://logz.io/blog/top-5-commercial-siem-tools/)
+ 
+ ## Cryptography Basics
+ 
+ ### 1.Introduction to Encryption
+ 
+ 
+ 
+ 
+ 
+ ### 2.Encryption in Transit
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ ### 3.File Hashes and Digital Signatures
+ 
 
 
 

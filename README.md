@@ -207,12 +207,25 @@ Useful link for cheking virus:
  
 The first type of encryption is the **Symmetric encryption**: it uses only one key, a secret ket to both encrypt and decrypt the data. The key can be in the form of a passcode or a series of randomized letters and numbers from a generator or RNG. There are two types of symetric encryption algorithms:
 - **Block algorithms** -> in which set length bits are encrypted with the use of a specific secret key. As the data is being encrypted the system holds the data in memory as it waits for the block to complete
-- **Stream algorithms** -> the data is encrypted as ait strems and is not retained in system memory. 
+- **Stream algorithms** -> the data is encrypted as it strems and is not retained in system memory. 
 
 The types of symmetric encryption are:
 - **AES**: advanced encryption standard was designed around the start of this century to replace DES. 
 - **Twofish**
-- **RC4**
+- **RC4** Rivest Cipher 4
+
+Symmetric Strengths and Weknesses:
+- Very fast
+- Each party already has the key so the data can be transmitted in any manner
+- Key transport is difficult. The only true secure way is to hand it from person to person
+- Once key is exchanged there is no identity verification as to who has the key
+
+The second type is **asymmetric encryption** in which keys are in pairs. It is known as a public key cryptography because one of the keys is usually public and  the other secret. So one encrypts and the other decrypts. To work successfully, asymmetric relies on a key management system in the form of a public key infrastructure. A public key infrastructures (PKI) is a set of servers, software and protocols that manage the keys of a group of users. PKI uses digital certificate to verify identity.
+Below some types of asymmetric encryption:
+- RSA -> Riverst Shamir Adleman is used primerly for computer messaging. RSAs keys are created by generating two large prime numbers and perform additional mathematical formulations on them, creating the public key. Then the public key is sent to anyone that requests it. They encrypt the data and send it back to the recipient. After that the primary key is used in conjuction with one of the original prime numbers to decrypt the data.
+- Diffie-Hellman -> 
+
+
  
  
  

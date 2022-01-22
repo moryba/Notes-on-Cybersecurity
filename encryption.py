@@ -1,3 +1,6 @@
+#Encrypt a message by typing a message and then choosing an integer for you encryption
+# To decrypt use the same integer with the sign minus
+
 import string
 from time import sleep
 
@@ -25,6 +28,5 @@ def encrypt():
     print("Your encrypted message is :\n")
     print(encrypted_message)
 
-#Encrypt a message by typing a message and then choosing an integer for you encryption
 encrypt()
 

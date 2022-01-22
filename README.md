@@ -240,16 +240,40 @@ Below some types of asymmetric encryption:
 **Case uses for both symmetric and asymmetric:**
 - VPN traffic: the connection is established using asymmetric encryption then private keys are exchanged and symmetric encryption is established
 - SSH: it works in the same way of VPN
-
-
- 
- 
- 
- 
  
  ### 2.Encryption in Transit
  
+ **Data at rest and in Transit**
  
+ Data at Rest is data is not moving from device to device or network to network, such as data stored on a hard drive\flash drive.
+ 
+Data in transit is data that are moving from one location to another such as internet or through a private network. Data in Transit generally uses asymmetric encryption with a certificate authority. If data is traversing a private line, it will likely use symmetric. 
+ 
+Encryption in Transit is the application of cryptography to protect data that is moving from one location to another. One of the many ways to achieve that is **encrypt prior to sending (encrypt the document, the email or FTP).
+
+
+ **Types of Encryption Techniques for Data in Transit**
+
+Some common techniques for data in transit are:
+- **HTTPS/TLS** (HyperText Transport Protocol/Transport Layes Security) --> HTTPS is the protocol that permit your browser to commmunicate with web servers. In order to change      HTTP, which use clear text, to HTTPS which uses ciphertext, we add SSL/TLS. SSL is secure socket layer which was renamed in TLS in 2000. So when the browser reaches out to an    HTTPS site, it is using asymmetric cryptography and check that digital certificate is authentic and issued by a certificate authority. At that point, the rest of the TLS        handshake occurs more than just a moment. Now a symmetric cryptographic session has begun, allowing for the fast communications we expect from the internet. 
+
+   TLS handshake mentioned before is the method our traffic becomes fully encrypted when communicating with web servers. 
+   
+- **SSH** --> It is to Telnet what HTTPS is to HTTP. The initial handshake is similar to TLS with a version exchange, however,in opposition to TLS where a digital certificate is    exchanged, at this point, a password is sent from the client to the server. Now there is a key exchange with a list of preferred cryptographic techniques.  
+
+- **SFTP/FTPS** (Secure File Transfer Protocol/File Transfer Protocol over SSL) --> it authenticates the same as SSH and FTPS uses the TLS encryption method we learned about in     the HTTPS section. 
+
+- **RDP** (Remote Desktop Protocol) --> it permits to connect our windows machines
+
+ 
+ **Determine appropriate Encryption Types**
+ 
+ The right encryption depends on what it is your goal. Below some types and the goal. 
+ 
+ - **HTTP/TLS**--> the goal is processing or hosting sensitive data accessible from the internet
+ - **SSH**--> the goal is servers(particularly Linux) to execute commands and process jobs
+ - **SFTP or FTPS**--> the goal is hosting files for others to download (choice depends on the configuration of the host they reside on)
+ - **Encryption at Rest**--> for additional security, consider using on files that are to be accessed via SSH or SFTP/FTPS
  
  
  

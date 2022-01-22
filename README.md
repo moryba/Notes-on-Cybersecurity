@@ -205,9 +205,9 @@ Useful link for cheking virus:
  ### 1.Introduction to Encryption
  In cryptography, encryption is the process of taking data that is plaintext (readable data) and converting it via a mathematical algorithm into ciphertext. Only the authorized parties with the appropriate key can reverse the process and view the data. 
  
-The first type of encryption is the **Symmetric encryption**: it uses only one key, a secret ket to both encrypt and decrypt the data. The key can be in the form of a passcode or a series of randomized letters and numbers from a generator or RNG. There are two types of symetric encryption algorithms:
+The first type of encryption is the **Symmetric encryption**: it uses only one key, a secret key to both encrypt and decrypt the data. The key can be in the form of a passcode or a series of randomized letters and numbers from a generator or RNG. There are two types of symmetric encryption algorithms:
 - **Block algorithms** -> in which set length bits are encrypted with the use of a specific secret key. As the data is being encrypted the system holds the data in memory as it waits for the block to complete
-- **Stream algorithms** -> the data is encrypted as it strems and is not retained in system memory. 
+- **Stream algorithms** -> the data is encrypted as it strems and it is not retained in system memory. 
 
 The types of symmetric encryption are:
 - **AES**: advanced encryption standard was designed around the start of this century to replace DES. 
@@ -222,8 +222,24 @@ Symmetric Strengths and Weknesses:
 
 The second type is **asymmetric encryption** in which keys are in pairs. It is known as a public key cryptography because one of the keys is usually public and  the other secret. So one encrypts and the other decrypts. To work successfully, asymmetric relies on a key management system in the form of a public key infrastructure. A public key infrastructures (PKI) is a set of servers, software and protocols that manage the keys of a group of users. PKI uses digital certificate to verify identity.
 Below some types of asymmetric encryption:
-- RSA -> Riverst Shamir Adleman is used primerly for computer messaging. RSAs keys are created by generating two large prime numbers and perform additional mathematical formulations on them, creating the public key. Then the public key is sent to anyone that requests it. They encrypt the data and send it back to the recipient. After that the primary key is used in conjuction with one of the original prime numbers to decrypt the data.
-- Diffie-Hellman -> 
+- RSA -> Riverst Shamir Adleman is used primerly for computer messaging (e.g. HTTPS). RSAs keys are created by generating two large prime numbers and perform additional mathematical formulations on them, creating the public key. Then the public key is sent to anyone that requests it. They encrypt the data and send it back to the recipient. After that the primary key is used in conjuction with one of the original prime numbers to decrypt the data.
+- Diffie-Hellman -> The initial key is agreed upon publicly in the form of a very large prime number (2.000 bits in length). Each partecipants chooses another prime number that serves as their secret or private key. To cncrypt, each patecipant combines their private key with the public key and sends to the other who adds their private key and sends back. To decrypt the recipient simply removes their  private key leaving the data. 
+
+**Asymmetric Stengths** :
+- Authentication, it allows you to veirfy the identity of the sender/recipient
+- Private Key never needs to be shared
+
+**Asymmetric Weaknesses** :
+- Slower than symmetric
+- By requiring a Certificate Authority, it creates the need to trust a 3rd party
+
+**Some examples of symmetric and asymmetric encyption are:**
+- Symmetric --> In Data at Rest (used in Banking System), files that are stored on a hard drive, it often uses symmetric encryption because the system or the user hold the key
+- Asymmetric --> Digital certificate to verify identity with a third party. In most of the cases asymmetric is perhaps most commonly associated with TLS in the form of HTTPS or secure web browsing
+
+**Case uses for both symmetric and asymmetric:**
+- VPN traffic: the connection is established using asymmetric encryption then private keys are exchanged and symmetric encryption is established
+- SSH: it works in the same way of VPN
 
 
  

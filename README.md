@@ -276,10 +276,20 @@ Some common techniques for data in transit are:
  - **Encryption at Rest**--> for additional security, consider using on files that are to be accessed via SSH or SFTP/FTPS
  
  
- 
- 
- 
- ### 3.File Hashes and Digital Signatures
+### 3.File Hashes and Digital Signatures
+
+**File Hash**
+
+File has is a digital fingerprint that verifies a file is what it says it is,  
+File hashing transforms blocks of data into a far shorter length to represent the original string. It is not encryption. Hashing is a one-way function. Common types of hashes:
+- **MD5** Message Digest 5 - mainly retired due to collisions which are the risk of a duplicate hash
+- **SHA2** Secure hashing algorithm 2. When you think SHA256, this is it. 
+
+**Key Terms**
+- File Hash is the process of using an algorithm for veryying the integrity of a computer file
+- Collision is a situation that occurs when two distinct pieces of data have the same hash value
+
+
  
 
 

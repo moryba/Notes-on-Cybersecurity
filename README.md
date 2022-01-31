@@ -294,9 +294,9 @@ Digital signatures are used for authenticity (the person or site are who they sa
 It is possible to see the hash of a file by going to powershell and digit **Get-FileHash test.py**.
 
 Additional reading:
-[SHA INFO](https://www.thesslstore.com/blog/difference-sha-1-sha-2-sha-256-hash-algorithms/)
-[MD5 INFO](https://datatracker.ietf.org/doc/html/rfc1321)
-[FILE HASH INFO](https://www.howtogeek.com/67241/htg-explains-what-are-md5-sha-1-hashes-and-how-do-i-check-them/)
+- [SHA INFO](https://www.thesslstore.com/blog/difference-sha-1-sha-2-sha-256-hash-algorithms/)
+- [MD5 INFO](https://datatracker.ietf.org/doc/html/rfc1321)
+- [FILE HASH INFO](https://www.howtogeek.com/67241/htg-explains-what-are-md5-sha-1-hashes-and-how-do-i-check-them/)
 
 **Key Terms**
 - File Hash is the process of using an algorithm for veryfing the integrity of a computer file

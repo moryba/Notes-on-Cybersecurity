@@ -280,13 +280,26 @@ Some common techniques for data in transit are:
 
 **File Hash**
 
-File has is a digital fingerprint that verifies a file is what it says it is,  
-File hashing transforms blocks of data into a far shorter length to represent the original string. It is not encryption. Hashing is a one-way function. Common types of hashes:
-- **MD5** Message Digest 5 - mainly retired due to collisions which are the risk of a duplicate hash
-- **SHA2** Secure hashing algorithm 2. When you think SHA256, this is it. 
+File has is a digital fingerprint that verifies a file is what it says it is. 
+File hashing transforms blocks of data into a far shorter length to represent the original string. Hashing is an algorithm that calculates a fixed size bit string value from a file. A hash is usually represented in hexadecimal form. It is important to know that hashes is not encryption. Hashing is a one-way function. Common types of hashes:
+
+- **MD5** Message Digest 5 is a cryptographic hash function. It has a 128-bit and it is typically expressed as a 32 digit hexadecimal value. In MD5 the message to be hashed is modified to meet a specific mathematical size (this process is called padding).  It is broken into four word lengths of 32 bits. MD5 performs four rounds of this action, if it detects a single changes the entire hash will be different. MD5 has proven to be slightl prone to collisions, which means theoretically a duplicate hash could be created. 
+
+- **SHA2** Secure hashing algorithm 2. In SHA2 all hash algorithms begin with padding to set a standard length with which to operate. Then the data is broken into blocks of 512 bits. At this point, the hash algorithm is applied using a complex mathematical formula that multiplies portions of the bits with prime numbers and then a shuffling of the data. Lastly, we have output of 64 hexadecimal digits. 
+
+**Digital Signatures**
+
+Digital signatures are used for authenticity (the person or site are who they say they are). They use hashing algorithms, like what we just learned about. At this point there are signed using the public key infrastructure we learned about in a previous section. The hash is combined with the sender's private key and it is sent to the recipient. At this point, the signature is validate by using the public key. 
+
+It is possible to see the hash of a file by going to powershell and digit **Get-FileHash test.py**.
+
+Additional reading:
+[SHA INFO](https://www.thesslstore.com/blog/difference-sha-1-sha-2-sha-256-hash-algorithms/)
+[MD5 INFO](https://datatracker.ietf.org/doc/html/rfc1321)
+[FILE HASH INFO](https://www.howtogeek.com/67241/htg-explains-what-are-md5-sha-1-hashes-and-how-do-i-check-them/)
 
 **Key Terms**
-- File Hash is the process of using an algorithm for veryying the integrity of a computer file
+- File Hash is the process of using an algorithm for veryfing the integrity of a computer file
 - Collision is a situation that occurs when two distinct pieces of data have the same hash value
 
 
